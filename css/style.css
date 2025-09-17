@@ -1,10 +1,10 @@
-/* Базовые стили */
+/* ========== БАЗОВЫЕ СТИЛИ ========== */
 body {
   font-family: 'DejaVu Sans', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f1ee; /* чуть темнее светлого */
-  color: #333; /* тёмно-серый текст */
+  background-color: #f4f1ee;
+  color: #333;
   scroll-behavior: smooth;
 }
 
@@ -12,8 +12,8 @@ a { text-decoration: none; color: #333; }
 a:hover { color: #b15a2b; }
 
 header, footer {
-  background-color: #b15a2b; /* насыщенный коричневый */
-  color: #fff; /* белый текст */
+  background-color: #b15a2b;
+  color: #fff;
   padding: 20px;
   text-align: center;
 }
@@ -29,13 +29,13 @@ nav a {
   color: #fff;
   font-weight: bold;
   padding: 5px 10px;
+  transition: 0.3s;
 }
 
-nav a.active {
-  border-bottom: 2px solid #fff;
-}
+nav a.active,
+nav a:hover { border-bottom: 2px solid #fff; }
 
-/* Секции */
+/* ========== СЕКЦИИ ========== */
 section {
   margin: 50px auto;
   padding: 20px;
@@ -43,22 +43,21 @@ section {
   opacity: 0;
   transform: translateY(50px);
   transition: all 0.8s ease;
-  background-color: #fff; /* белый фон для блоков */
+  background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-section.visible {
-  opacity: 1;
-  transform: translateY(0);
+section.visible { 
+  opacity: 1; 
+  transform: translateY(0); 
 }
 
-/* Баннер */
+/* ========== БАННЕР ========== */
 .banner-slider {
   position: relative;
   overflow: hidden;
-  height: 300px;
-  margin-bottom: 40px;
+  height: 400px;
 }
 
 .banner-slider .slide {
@@ -68,30 +67,43 @@ section.visible {
   display: none;
 }
 
-.banner-slider .slide.active {
-  display: block;
-  animation: fade 1s;
+.banner-slider .slide.active { 
+  display: block; 
+  animation: fade 1s; 
 }
 
-.banner-slider img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.banner-slider img { 
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
 }
 
-.banner-slider .slide-text {
+.slide-text {
   position: absolute;
-  bottom: 20px;
-  left: 20px;
+  bottom: 30px;
+  left: 30px;
   color: #fff;
-  background: rgba(0,0,0,0.5); /* затемнённый фон под текст */
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-weight: bold;
+  background: rgba(0,0,0,0.5);
+  padding: 20px;
+  border-radius: 10px;
 }
 
-.banner-slider .prev,
-.banner-slider .next {
+.slide-text h2 { margin: 0 0 10px; }
+.slide-text p { margin: 0 0 15px; }
+
+.btn {
+  background: #b15a2b; 
+  color: #fff; 
+  padding: 10px 20px; 
+  border-radius: 5px; 
+  font-weight: bold; 
+  display: inline-block; 
+  transition: 0.3s; 
+}
+
+.btn:hover { background: #963f1e; }
+
+.prev, .next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -103,18 +115,61 @@ section.visible {
   padding: 5px 15px;
 }
 
-.banner-slider .prev { left: 10px; }
-.banner-slider .next { right: 10px; }
+.prev { left: 10px; }
+.next { right: 10px; }
 
-@keyframes fade {
-  from {opacity: 0;}
-  to {opacity: 1;}
+@keyframes fade { from {opacity: 0;} to {opacity: 1;} }
+
+/* ========== КАРТОЧКИ ========== */
+.cards { 
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 20px; 
+  justify-content: center;
 }
 
-/* Галерея */
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  flex: 1 1 250px;
+  max-width: 300px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.card img { 
+  width: 100%; 
+  height: 180px; 
+  object-fit: cover; 
+}
+
+.card h3 { margin: 10px 0 5px; }
+.card p { margin: 0 10px 10px; }
+
+.btn-small {
+  background: #b15a2b; 
+  color: #fff; 
+  padding: 5px 15px; 
+  border-radius: 5px; 
+  font-weight: bold; 
+  display: inline-block; 
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+
+.btn-small:hover { background: #963f1e; }
+
+/* ========== ГАЛЕРЕЯ ========== */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 15px;
 }
 
@@ -122,45 +177,16 @@ section.visible {
   width: 100%;
   border-radius: 10px;
   object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* Карточки для новостей/проекта/сотрудников */
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+.gallery-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
 }
 
-.card {
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-  overflow: hidden;
-  flex: 1 1 200px;
-  max-width: 300px;
-  text-align: center;
-  transition: transform 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-}
-
-.card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-
-.card h3 {
-  margin: 10px 0 5px;
-}
-
-.card p {
-  margin: 0 10px 10px;
-}
-
-/* Контактная форма */
+/* ========== КОНТАКТНАЯ ФОРМА ========== */
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -168,8 +194,7 @@ section.visible {
 }
 
 .contact-form input,
-.contact-form textarea,
-.contact-form button {
+.contact-form textarea {
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
@@ -182,8 +207,15 @@ section.visible {
   border: none;
   cursor: pointer;
   font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: 0.3s;
 }
 
-.contact-form button:hover {
-  background-color: #963f1e;
+.contact-form button:hover { background-color: #963f1e; }
+
+/* ========== FOOTER ========== */
+footer p {
+  margin: 0;
+  font-weight: bold;
 }

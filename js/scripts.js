@@ -4,7 +4,6 @@
 let slides = document.querySelectorAll('.banner-slider .slide');
 let currentSlide = 0;
 
-// Кнопки "вперед" и "назад"
 const nextBtn = document.querySelector('.banner-slider .next');
 const prevBtn = document.querySelector('.banner-slider .prev');
 
@@ -29,7 +28,6 @@ function prevSlide() {
 // Автослайд каждые 5 секунд
 setInterval(nextSlide, 5000);
 
-
 // ================================
 // АНИМАЦИЯ СЕКЦИЙ ПРИ СКРОЛЛЕ
 // ================================
@@ -45,7 +43,6 @@ function showSections() {
 
 window.addEventListener('scroll', showSections);
 window.addEventListener('load', showSections);
-
 
 // ================================
 // ПОДСВЕТКА МЕНЮ ПРИ СКРОЛЛЕ
@@ -69,9 +66,8 @@ function highlightMenu() {
 window.addEventListener('scroll', highlightMenu);
 window.addEventListener('load', highlightMenu);
 
-
 // ================================
-// ПРОСТАЯ ОБРАБОТКА ФОРМЫ (для красоты)
+// ПРОСТАЯ ОБРАБОТКА ФОРМЫ
 // ================================
 const contactForm = document.querySelector('.contact-form');
 if(contactForm){

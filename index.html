@@ -12,7 +12,7 @@
   <h1>Центр народного творчества</h1>
   <nav>
     <a href="#home" class="active">Главная</a>
-    <a href="#news-carousel">Новости</a>
+    <a href="#news">Новости</a>
     <a href="#events">Афиша</a>
     <a href="#projects">Проекты</a>
     <a href="#documents">Документы</a>
@@ -22,24 +22,46 @@
   </nav>
 </header>
 
-<!-- Баннер-слайдер -->
-<div class="banner-slider" id="home">
-  <div class="slide active"><img src="images/banner1.jpg" alt=""><div class="slide-text">Вдохновение для всех</div></div>
-  <div class="slide"><img src="images/banner2.jpg" alt=""><div class="slide-text">Концерты, выставки и мастер-классы</div></div>
-  <div class="slide"><img src="images/banner3.jpg" alt=""><div class="slide-text">Присоединяйтесь к нашим проектам</div></div>
+<!-- Баннер -->
+<section class="banner-slider" id="home">
+  <div class="slide active">
+    <img src="images/banner1.jpg" alt="">
+    <div class="slide-text">
+      <h2>Вдохновение для всех</h2>
+      <p>Концерты, мастер-классы и проекты</p>
+      <a href="#events" class="btn">Подробнее</a>
+    </div>
+  </div>
+  <div class="slide">
+    <img src="images/banner2.jpg" alt="">
+    <div class="slide-text">
+      <h2>Откройте для себя творчество</h2>
+      <p>Выставки и культурные события</p>
+      <a href="#projects" class="btn">Узнать больше</a>
+    </div>
+  </div>
   <button class="prev">&#10094;</button>
   <button class="next">&#10095;</button>
-</div>
+</section>
 
 <main>
+
   <!-- Новости -->
-  <section id="news-carousel">
+  <section id="news">
     <h2>Новости</h2>
     <div class="cards">
-      <div class="card"><img src="images/news1.jpg" alt=""><h3>Новость 1</h3></div>
-      <div class="card"><img src="images/news2.jpg" alt=""><h3>Новость 2</h3></div>
-      <div class="card"><img src="images/news3.jpg" alt=""><h3>Новость 3</h3></div>
-      <div class="card"><img src="images/news4.jpg" alt=""><h3>Новость 4</h3></div>
+      <div class="card">
+        <img src="images/news1.jpg" alt="">
+        <h3>Новость 1</h3>
+        <p>Краткое описание новости 1...</p>
+        <a href="#" class="btn-small">Читать далее</a>
+      </div>
+      <div class="card">
+        <img src="images/news2.jpg" alt="">
+        <h3>Новость 2</h3>
+        <p>Краткое описание новости 2...</p>
+        <a href="#" class="btn-small">Читать далее</a>
+      </div>
     </div>
   </section>
 
@@ -47,8 +69,16 @@
   <section id="events">
     <h2>Афиша ближайших мероприятий</h2>
     <div class="cards">
-      <div class="card"><img src="images/event1.jpg" alt=""><h3>Концерт народной музыки</h3><p>Дата: 25 сентября 2025</p></div>
-      <div class="card"><img src="images/event2.jpg" alt=""><h3>Мастер-класс по ремеслу</h3><p>Дата: 28 сентября 2025</p></div>
+      <div class="card">
+        <img src="images/event1.jpg" alt="">
+        <h3>Концерт народной музыки</h3>
+        <p>Дата: 25 сентября 2025</p>
+      </div>
+      <div class="card">
+        <img src="images/event2.jpg" alt="">
+        <h3>Мастер-класс по ремеслу</h3>
+        <p>Дата: 28 сентября 2025</p>
+      </div>
     </div>
   </section>
 
@@ -56,8 +86,16 @@
   <section id="projects">
     <h2>Проекты</h2>
     <div class="cards">
-      <div class="card"><img src="images/project1.jpg" alt=""><h3>Проект 1</h3><p>Краткое описание проекта 1...</p></div>
-      <div class="card"><img src="images/project2.jpg" alt=""><h3>Проект 2</h3><p>Краткое описание проекта 2...</p></div>
+      <div class="card">
+        <img src="images/project1.jpg" alt="">
+        <h3>Проект 1</h3>
+        <p>Описание проекта 1...</p>
+      </div>
+      <div class="card">
+        <img src="images/project2.jpg" alt="">
+        <h3>Проект 2</h3>
+        <p>Описание проекта 2...</p>
+      </div>
     </div>
   </section>
 
@@ -73,7 +111,7 @@
 
   <!-- Галерея -->
   <section id="gallery">
-    <h2>Галерея мероприятий</h2>
+    <h2>Галерея</h2>
     <div class="gallery-grid">
       <img src="images/photo1.jpg" alt="">
       <img src="images/photo2.jpg" alt="">
@@ -87,10 +125,17 @@
   <section id="about">
     <h2>О центре</h2>
     <p>Центр народного творчества занимается популяризацией традиционной культуры, организует концерты, выставки, мастер-классы и проекты для всех возрастов.</p>
-    <h3>Наша команда</h3>
     <div class="cards">
-      <div class="card"><img src="images/staff1.jpg" alt=""><h3>Иванова Мария</h3><p>Директор</p></div>
-      <div class="card"><img src="images/staff2.jpg" alt=""><h3>Петров Алексей</h3><p>Организатор мероприятий</p></div>
+      <div class="card">
+        <img src="images/staff1.jpg" alt="">
+        <h3>Иванова Мария</h3>
+        <p>Директор</p>
+      </div>
+      <div class="card">
+        <img src="images/staff2.jpg" alt="">
+        <h3>Петров Алексей</h3>
+        <p>Организатор мероприятий</p>
+      </div>
     </div>
   </section>
 
@@ -100,7 +145,6 @@
     <p>Адрес: г. Якутск, ул. Примерная, 1</p>
     <p>Телефон: +7 (4112) 123-456</p>
     <p>Email: info@cnt-yakutsk.ru</p>
-    <h3>Свяжитесь с нами</h3>
     <form class="contact-form">
       <input type="text" placeholder="Ваше имя" required>
       <input type="email" placeholder="Ваш Email" required>
