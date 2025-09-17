@@ -1,0 +1,189 @@
+/* Базовые стили */
+body {
+  font-family: 'DejaVu Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f1ee; /* чуть темнее светлого */
+  color: #333; /* тёмно-серый текст */
+  scroll-behavior: smooth;
+}
+
+a { text-decoration: none; color: #333; }
+a:hover { color: #b15a2b; }
+
+header, footer {
+  background-color: #b15a2b; /* насыщенный коричневый */
+  color: #fff; /* белый текст */
+  padding: 20px;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #fff;
+  font-weight: bold;
+  padding: 5px 10px;
+}
+
+nav a.active {
+  border-bottom: 2px solid #fff;
+}
+
+/* Секции */
+section {
+  margin: 50px auto;
+  padding: 20px;
+  max-width: 1200px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+  background-color: #fff; /* белый фон для блоков */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Баннер */
+.banner-slider {
+  position: relative;
+  overflow: hidden;
+  height: 300px;
+  margin-bottom: 40px;
+}
+
+.banner-slider .slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.banner-slider .slide.active {
+  display: block;
+  animation: fade 1s;
+}
+
+.banner-slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner-slider .slide-text {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: #fff;
+  background: rgba(0,0,0,0.5); /* затемнённый фон под текст */
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.banner-slider .prev,
+.banner-slider .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  color: #fff;
+  background: rgba(0,0,0,0.5);
+  border: none;
+  cursor: pointer;
+  padding: 5px 15px;
+}
+
+.banner-slider .prev { left: 10px; }
+.banner-slider .next { right: 10px; }
+
+@keyframes fade {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+/* Галерея */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+  gap: 15px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Карточки для новостей/проекта/сотрудников */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  flex: 1 1 200px;
+  max-width: 300px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin: 10px 0 5px;
+}
+
+.card p {
+  margin: 0 10px 10px;
+}
+
+/* Контактная форма */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.contact-form button {
+  background-color: #b15a2b;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.contact-form button:hover {
+  background-color: #963f1e;
+}

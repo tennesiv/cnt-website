@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Центр народного творчества</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <h1>Центр народного творчества</h1>
+  <nav>
+    <a href="#home" class="active">Главная</a>
+    <a href="#news-carousel">Новости</a>
+    <a href="#events">Афиша</a>
+    <a href="#projects">Проекты</a>
+    <a href="#documents">Документы</a>
+    <a href="#gallery">Галерея</a>
+    <a href="#about">О центре</a>
+    <a href="#contacts">Контакты</a>
+  </nav>
+</header>
+
+<!-- Баннер-слайдер -->
+<div class="banner-slider" id="home">
+  <div class="slide active"><img src="images/banner1.jpg" alt=""><div class="slide-text">Вдохновение для всех</div></div>
+  <div class="slide"><img src="images/banner2.jpg" alt=""><div class="slide-text">Концерты, выставки и мастер-классы</div></div>
+  <div class="slide"><img src="images/banner3.jpg" alt=""><div class="slide-text">Присоединяйтесь к нашим проектам</div></div>
+  <button class="prev">&#10094;</button>
+  <button class="next">&#10095;</button>
+</div>
+
+<main>
+  <!-- Новости -->
+  <section id="news-carousel">
+    <h2>Новости</h2>
+    <div class="cards">
+      <div class="card"><img src="images/news1.jpg" alt=""><h3>Новость 1</h3></div>
+      <div class="card"><img src="images/news2.jpg" alt=""><h3>Новость 2</h3></div>
+      <div class="card"><img src="images/news3.jpg" alt=""><h3>Новость 3</h3></div>
+      <div class="card"><img src="images/news4.jpg" alt=""><h3>Новость 4</h3></div>
+    </div>
+  </section>
+
+  <!-- Афиша -->
+  <section id="events">
+    <h2>Афиша ближайших мероприятий</h2>
+    <div class="cards">
+      <div class="card"><img src="images/event1.jpg" alt=""><h3>Концерт народной музыки</h3><p>Дата: 25 сентября 2025</p></div>
+      <div class="card"><img src="images/event2.jpg" alt=""><h3>Мастер-класс по ремеслу</h3><p>Дата: 28 сентября 2025</p></div>
+    </div>
+  </section>
+
+  <!-- Проекты -->
+  <section id="projects">
+    <h2>Проекты</h2>
+    <div class="cards">
+      <div class="card"><img src="images/project1.jpg" alt=""><h3>Проект 1</h3><p>Краткое описание проекта 1...</p></div>
+      <div class="card"><img src="images/project2.jpg" alt=""><h3>Проект 2</h3><p>Краткое описание проекта 2...</p></div>
+    </div>
+  </section>
+
+  <!-- Документы -->
+  <section id="documents">
+    <h2>Документы</h2>
+    <ul>
+      <li><a href="docs/doc1.pdf" target="_blank">Отчёт за 2024 год</a></li>
+      <li><a href="docs/doc2.pdf" target="_blank">Положение о клубе</a></li>
+      <li><a href="docs/doc3.pdf" target="_blank">Форма заявки на участие</a></li>
+    </ul>
+  </section>
+
+  <!-- Галерея -->
+  <section id="gallery">
+    <h2>Галерея мероприятий</h2>
+    <div class="gallery-grid">
+      <img src="images/photo1.jpg" alt="">
+      <img src="images/photo2.jpg" alt="">
+      <img src="images/photo3.jpg" alt="">
+      <img src="images/photo4.jpg" alt="">
+      <img src="images/photo5.jpg" alt="">
+    </div>
+  </section>
+
+  <!-- О центре -->
+  <section id="about">
+    <h2>О центре</h2>
+    <p>Центр народного творчества занимается популяризацией традиционной культуры, организует концерты, выставки, мастер-классы и проекты для всех возрастов.</p>
+    <h3>Наша команда</h3>
+    <div class="cards">
+      <div class="card"><img src="images/staff1.jpg" alt=""><h3>Иванова Мария</h3><p>Директор</p></div>
+      <div class="card"><img src="images/staff2.jpg" alt=""><h3>Петров Алексей</h3><p>Организатор мероприятий</p></div>
+    </div>
+  </section>
+
+  <!-- Контакты -->
+  <section id="contacts">
+    <h2>Контакты</h2>
+    <p>Адрес: г. Якутск, ул. Примерная, 1</p>
+    <p>Телефон: +7 (4112) 123-456</p>
+    <p>Email: info@cnt-yakutsk.ru</p>
+    <h3>Свяжитесь с нами</h3>
+    <form class="contact-form">
+      <input type="text" placeholder="Ваше имя" required>
+      <input type="email" placeholder="Ваш Email" required>
+      <textarea placeholder="Сообщение" rows="5" required></textarea>
+      <button type="submit">Отправить</button>
+    </form>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2025 Центр народного творчества</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
