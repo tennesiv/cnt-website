@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f4f1ee;
-  color: #333;
+  color: #555;
   scroll-behavior: smooth;
 }
 
@@ -46,6 +46,7 @@ section {
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  color: #555;
 }
 
 section.visible { 
@@ -82,7 +83,7 @@ section.visible {
   position: absolute;
   bottom: 30px;
   left: 30px;
-  color: #fff;
+  color: #f0f0f0;
   background: rgba(0,0,0,0.5);
   padding: 20px;
   border-radius: 10px;
